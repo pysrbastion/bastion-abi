@@ -1,0 +1,611 @@
+[
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract CToken",
+          "name": "cToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address payable",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "rewardCount",
+          "type": "uint8"
+        }
+      ],
+      "name": "cTokenBalances",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "cToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "balanceOf",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowBalanceStored",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "exchangeRateStored",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenBalance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenAllowance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowIndex",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint8",
+                  "name": "rewardType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "holder",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "rewardAccrue",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "rewardEstimate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "borrowSpeed",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "supplySpeed",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct BastionLens.RewardBalances[]",
+              "name": "rewardBalances",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct BastionLens.CTokenBalances",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract CToken[]",
+          "name": "cTokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address payable",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "rewardCount",
+          "type": "uint8"
+        }
+      ],
+      "name": "cTokenBalancesAll",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "cToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "balanceOf",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowBalanceStored",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "exchangeRateStored",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenBalance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenAllowance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowIndex",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint8",
+                  "name": "rewardType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "holder",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "rewardAccrue",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "rewardEstimate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "borrowSpeed",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "supplySpeed",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct BastionLens.RewardBalances[]",
+              "name": "rewardBalances",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct BastionLens.CTokenBalances[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract CToken",
+          "name": "cToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "rewardCount",
+          "type": "uint8"
+        }
+      ],
+      "name": "cTokenMetadata",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "cToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "exchangeRateCurrent",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "supplyRatePerBlock",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowRatePerBlock",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "reserveFactorMantissa",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalBorrows",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalReserves",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalSupply",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalCash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isListed",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "collateralFactorMantissa",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "underlyingAssetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "cTokenDecimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "underlyingDecimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowCap",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "marketBorrowIndex",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint8",
+                  "name": "rewardType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "supplySpeed",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "borrowSpeed",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct BastionLens.RewardSpeed[]",
+              "name": "rewardSpeed",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct BastionLens.CTokenMetadata",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract CToken[]",
+          "name": "cTokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "rewardCount",
+          "type": "uint8"
+        }
+      ],
+      "name": "cTokenMetadataAll",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "cToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "exchangeRateCurrent",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "supplyRatePerBlock",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowRatePerBlock",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "reserveFactorMantissa",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalBorrows",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalReserves",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalSupply",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalCash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isListed",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "collateralFactorMantissa",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "underlyingAssetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "cTokenDecimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "underlyingDecimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowCap",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "marketBorrowIndex",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint8",
+                  "name": "rewardType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "supplySpeed",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "borrowSpeed",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct BastionLens.RewardSpeed[]",
+              "name": "rewardSpeed",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct BastionLens.CTokenMetadata[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract CToken",
+          "name": "cToken",
+          "type": "address"
+        }
+      ],
+      "name": "cTokenUnderlyingPrice",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "cToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "underlyingPrice",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BastionLens.CTokenUnderlyingPrice",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract CToken[]",
+          "name": "cTokens",
+          "type": "address[]"
+        }
+      ],
+      "name": "cTokenUnderlyingPriceAll",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "cToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "underlyingPrice",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BastionLens.CTokenUnderlyingPrice[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract ComptrollerLensInterface",
+          "name": "comptroller",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "getAccountLimits",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract CToken[]",
+              "name": "markets",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "liquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortfall",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BastionLens.AccountLimits",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
